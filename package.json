@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:github-option-two": "node dist/github-option-two/server/server.mjs",
-    "deploy": "ng deploy --repo=https://github.com/sumanmitra121/github-option-two.git"
+    "deploy": "ng deploy --base-href=/github-option-two/"
   },
   "private": true,
   "dependencies": {
