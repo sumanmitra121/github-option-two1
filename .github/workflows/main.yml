@@ -12,7 +12,17 @@ jobs:
         node-version: [18.19.1]
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+          with:
+            ref: ${{ github.head_ref }}
+        - name: Check Github User
+          run: |
+            git --version
+            git config user.name 'sumanmitra121'
+            git config user.email 'sumanmitra0096@gmail.com'
+            git config user.name
+            git config user.email
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
